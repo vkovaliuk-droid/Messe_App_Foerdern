@@ -245,6 +245,45 @@
       background: #020617;
     }
 
+    /* Lange Beschriftung im zweiten Produkttab */
+
+    #tabJet {
+      font-size: 19px;
+      line-height: 1.05;
+    }
+
+    #tabJet.active {
+      font-size: 22px;
+      line-height: 1.05;
+    }
+
+    #tabJet .tab-de:not([hidden]),
+    #tabJet .tab-en:not([hidden]) {
+      display: block;
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+    }
+
+    /* Ausgeblendete Sprache muss unsichtbar bleiben */
+
+    #tabJet [hidden],
+    #tabRvo [hidden] {
+      display: none !important;
+    }
+
+    /* Englische Beschriftung des ersten Tabs kompakter darstellen */
+
+    html[lang="en"] #tabRvo {
+      font-size: 19px;
+      line-height: 1.05;
+    }
+
+    html[lang="en"] #tabRvo.active {
+      font-size: 24px;
+      line-height: 1.05;
+    }
+
   </style>
 </head>
 
@@ -261,8 +300,8 @@
         type="button"
         onclick="showProduct('rvo')"
       >
-        <span class="tab-de">Belüftungskonus</span>
-        <span class="tab-en" hidden>Ventilation Cone</span>
+        <span class="tab-de">Trogkettenförderer</span>
+        <span class="tab-en" hidden>Trough Chain Conveyor</span>
       </button>
 
       <button
@@ -271,8 +310,8 @@
         type="button"
         onclick="showProduct('jet')"
       >
-        <span class="tab-de">Getreidelagersilos</span>
-        <span class="tab-en" hidden>Grain storage silos</span>
+        <span class="tab-de">Annahme-<br>Trogkettenförderer</span>
+        <span class="tab-en" hidden>Reception Trough<br>Chain Conveyor</span>
       </button>
     </nav>
 
