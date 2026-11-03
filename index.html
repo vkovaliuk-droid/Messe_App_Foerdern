@@ -181,7 +181,7 @@ ul {
    rgba(15, 23, 42, 0.7) 25%,
    rgba(15, 23, 42, 0.2) 45%,
    rgba(15, 23, 42, 0) 60%),
-    url('bilder/konus/Konus_Bild_Titel.webp');
+    url('bilder/getreidemuehle/RVO_Bild_Titel.webp');
   background-size: cover;
   background-position: center;
   padding: 36px;
@@ -480,7 +480,8 @@ ul {
 
 .technical-table {
   width: 100%;
-  min-width: 700px;
+  min-width: 0;
+  table-layout: auto;
   border-collapse: collapse;
   background: #ffffff;
   color: #111827;
@@ -512,11 +513,13 @@ ul {
 }
 
 .technical-table thead th:first-child {
-  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .technical-table tbody th {
-  width: 40%;
+  width: 18%;
   background: #f1f5f9;
   color: #111827;
   font-weight: 600;
@@ -1109,370 +1112,6 @@ html.embedded #gallery {
   -webkit-overflow-scrolling: auto;
 }
 
-/* Kompakte technische Tabellen für Belüftungskonen */
-
-.cone-table-wrapper {
-  width: 100%;
-  overflow-x: hidden;
-  border-radius: 14px;
-}
-
-.cone-technical-table {
-  width: 100%;
-  min-width: 0;
-
-  table-layout: fixed;
-  border-collapse: collapse;
-
-  color: #111827;
-  background: #ffffff;
-}
-
-.cone-technical-table th,
-.cone-technical-table td {
-  padding: 0;
-
-  font-size: clamp(11px, 1.45vw, 14px);
-  line-height: 1.15;
-
-  vertical-align: middle;
-}
-
-.cone-technical-table thead th {
-  background: #9da6ba;
-  color: #ffffff;
-
-  font-weight: 700;
-  text-align: center;
-
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.cone-technical-table thead th:last-child {
-  border-right: none;
-}
-
-/* Erste Spalte: Silo-Typ oben, Silo-Durchmesser unten */
-
-.cone-type-header {
-  width: 19%;
-}
-
-/* Silo-Typ und Silo Ø gehören zu einer gemeinsamen Kopfzelle */
-
-.cone-type-header {
-  width: 19%;
-  padding: 0;
-  background: #dbe3ef;
-}
-
-.cone-type-header .cone-main-heading {
-  display: block;
-
-  min-height: 0;
-  padding: 9px 5px 2px;
-
-  background: transparent;
-  color: #004388;
-
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.15;
-  text-align: center;
-}
-
-.cone-type-header .cone-sub-heading {
-  display: block;
-
-  min-height: 0;
-  padding: 2px 5px 9px;
-
-  border: none;
-  background: transparent;
-  color: #64748b;
-
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.15;
-  text-align: center;
-}
-
-/* Normal und Erhöht im Tabellenkopf */
-
-.cone-value-headings {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  width: 100%;
-  min-height: 28px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-
-  font-size: 0.78em;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.cone-value-headings > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 0;
-  padding: 6px 2px;
-}
-
-.cone-value-headings > span + span {
-  border-left: 1px solid rgba(255, 255, 255, 0.55);
-}
-
-.cone-heading-normal {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.cone-heading-raised {
-  background: rgba(2, 6, 23, 0.2);
-}
-
-/* Erste Spalte der Datenzeilen */
-
-.cone-technical-table tbody th {
-  width: 19%;
-  padding: 7px 8px;
-
-  background: #d9dee8;
-  color: #111827;
-
-  font-weight: 750;
-  text-align: left;
-
-  border-right: 1px solid rgba(15, 23, 42, 0.18);
-}
-
-.cone-silo-diameter {
-  display: block;
-
-  margin-top: 3px;
-
-  color: #475569;
-
-  font-size: 0.82em;
-  font-weight: 600;
-  line-height: 1.05;
-}
-
-/* Geteilte Werte: links Normal, rechts Erhöht */
-
-.cone-values {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  width: 100%;
-  min-height: 42px;
-}
-
-.cone-values > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 0;
-  padding: 7px 3px;
-
-  white-space: nowrap;
-}
-
-/* Trennlinie zwischen Normal und Erhöht */
-
-.cone-values > span + span {
-  border-left: 1px solid rgba(15, 23, 42, 0.3);
-}
-
-/* Wert für normalen Unterbau */
-
-.cone-values > span:first-child {
-  background: rgba(255, 255, 255, 0.12);
-  font-weight: 600;
-}
-
-/* Wert für erhöhten Unterbau */
-
-.cone-values > span:last-child {
-  background: rgba(37, 99, 235, 0.12);
-  font-weight: 750;
-}
-
-/* Abwechselnde Zeilenfarben */
-
-.cone-technical-table tbody tr:nth-child(odd) td {
-  background: #d9dee8;
-}
-
-.cone-technical-table tbody tr:nth-child(even) td {
-  background: #c7cedb;
-}
-
-.cone-technical-table tbody tr:nth-child(even) th {
-  background: #c7cedb;
-}
-
-/* Helle Gestaltung der Konustabellen */
-
-/* Gesamte Tabelle */
-
-.cone-technical-table {
-  color: #1f2937;
-  background: #f8fafc;
-
-  font-size: 13px;
-}
-
-/* Hauptüberschriften:
-   Silo-Typ, Trichterhöhe, Gewicht, Mindervolumen */
-
-.cone-technical-table thead th {
-  background: #dbe3ef;
-  color: #1e293b;
-
-  font-size: 14px;
-  font-weight: 700;
-
-  border-right: 1px solid #ffffff;
-}
-
-/* Oberer Text im Tabellenkopf */
-
-.cone-main-heading {
-  min-height: 36px;
-  padding: 7px 4px;
-
-  color: #004388;
-
-  font-size: 18px;
-  font-weight: 700;
-}
-
-/* Unterer Bereich: Silo Ø */
-
-.cone-sub-heading {
-  min-height: 27px;
-  padding: 5px 3px;
-
-  background: #edf2f7;
-  color: #475569;
-
-  font-size: 14px;
-  font-weight: 650;
-
-  border-top: 1px solid #cbd5e1;
-}
-
-/* Unterer Tabellenkopf:
-   Normal und Erhöht */
-
-.cone-value-headings {
-  min-height: 27px;
-
-  background: #edf2f7;
-  color: #475569;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  border-top: 1px solid #cbd5e1;
-}
-
-.cone-value-headings > span {
-  padding: 6px 2px;
-}
-
-.cone-value-headings > span + span {
-  border-left: 1px solid #cbd5e1;
-}
-
-/* Normal */
-
-.cone-heading-normal {
-  background: #edf2f7;
-}
-
-/* Erhöht nur leicht absetzen */
-
-.cone-heading-raised {
-  background: #e2e8f0;
-}
-
-/* Erste Spalte mit NL 4, NL 5 usw. */
-
-.cone-technical-table tbody th {
-  background: #f1f5f9;
-  color: #1e293b;
-
-  font-size: 13px;
-  font-weight: 700;
-
-  border-right: 1px solid #d5dce7;
-}
-
-/* Silo-Durchmesser unter dem Typ */
-
-.cone-silo-diameter {
-  color: #64748b;
-
-  font-size: 11px;
-  font-weight: 600;
-}
-
-/* Werte in den Datenzellen */
-
-.cone-values {
-  min-height: 40px;
-
-  color: #1f2937;
-
-  font-size: 13px;
-}
-
-.cone-values > span {
-  padding: 7px 3px;
-}
-
-/* Trennlinie zwischen Normal und Erhöht */
-
-.cone-values > span + span {
-  border-left: 1px solid #d5dce7;
-}
-
-/* Normaler Unterbau */
-
-.cone-values > span:first-child {
-  background: transparent;
-  color: #334155;
-
-  font-weight: 600;
-}
-
-/* Erhöhter Unterbau */
-
-.cone-values > span:last-child {
-  background: rgba(148, 163, 184, 0.12);
-  color: #1e293b;
-
-  font-weight: 600;
-}
-
-/* Sehr helle abwechselnde Zeilen */
-
-.cone-technical-table tbody tr:nth-child(odd) td,
-.cone-technical-table tbody tr:nth-child(odd) th {
-  background-color: #f8fafc;
-}
-
-.cone-technical-table tbody tr:nth-child(even) td,
-.cone-technical-table tbody tr:nth-child(even) th {
-  background-color: #eef2f7;
-}
-
 /* Stabile PDF-Darstellung auf dem iPad */
 
 .pdf-overlay {
@@ -1600,11 +1239,11 @@ html.embedded #gallery {
 
         <div class="hero-text">
           <h1 data-i18n="homeTitle">
-            Trogkettenförderer<br>Typ NR
+            Hammermühle<br>Typ RVO
           </h1>
           <p data-i18n="homeDescription">
-            Mit 27° oder 45° Neigung für gleichmäßige Luftverteilung und 
-            eine einfache Restentleerung in neuen und bestehenden Anlagen.
+            Effiziente Vermahlung für eine gleichmäßige Produktqualität und zuverlässige Prozesse in der Futteraufbereitung.
+          </p>
       </div> 
     </div>
           <button
@@ -1645,33 +1284,33 @@ html.embedded #gallery {
 
         <button 
           class="brochure-card" 
-          onclick="openBrochure('cleaningCatalog', 'pdf/Lagern_Katalog.pdf')"
+          onclick="openBrochure('cleaningCatalog', 'pdf/Fördern_Katalog.pdf')"
         >
           <span class="icon">📄</span>
           <div>
             <h3 data-i18n="cleaningCatalog">
-              Gesamtkatalog Lagern
+              Gesamtkatalog Fördern
             </h3>
             <p data-i18n="cleaningCatalogText">
-              Ausführliche technische Daten, Maße und weitere Informationen zur Hammermühle ohne Gebläse Typ RVO 
-              sowie zu weiteren Produkten aus dem Bereich Lagern.
+              Ausführliche technische Daten, Maße und weitere Informationen zur Trogkettenförderer  
+              sowie zu weiteren Produkten aus dem Bereich Fördern.
             </p>
           </div>
         </button>
 
         <button 
           class="brochure-card" 
-          onclick="openBrochure('cleaningBrochure', 'pdf/NLT+NLK (Prospekt).pdf')"
+          onclick="openBrochure('cleaningBrochure', 'pdf/Fördern_Prospekt.pdf')"
         >
           <span class="icon">📄</span>
           <div>
             <h3 data-i18n="cleaningBrochure">
-              Produktprospekt Lagern
+              Produktprospekt Fördern
             </h3>
 
             <p data-i18n="cleaningBrochureText">
               Kompakter Überblick über unsere Produkte aus dem Bereich 
-              Lagern mit kurzen Informationen zu den einzelnen Produkten.
+              Fördern mit kurzen Informationen zu den einzelnen Produkten.
             </p>
           </div>
         </button>
@@ -1723,608 +1362,217 @@ html.embedded #gallery {
 
       <div class="card">
        <h3 data-i18n="modelComparison">
-        Ausführungsvarianten im Vergleich
+        Baugrößen im Vergleich
       </h3>
 
        <img
-         src="bilder/gemeinsam/Trogkettenförderer Typ NRL_NR.webp"
+         src="bilder/gemeinsam/Trogkettenförderer_Bild_Zeichnung.webp"
          alt="RVO Modelle im Vergleich"
          class="comparison-image"
        >
       </div>
-    <div class="card">
-      <h3 data-i18n="technicalData">
-        Technische Daten
-      </h3>
-      <div class="technical-table-group">
-        <h4
-          class="technical-table-title"
-          data-i18n="ventilationCone27"
-        >
-          Belüftungskonus 27°
-        </h4>
 
-        <div class="technical-table-wrapper cone-table-wrapper">
-          <table class="technical-table cone-technical-table">
-            <thead>
-              <tr>
-                <th scope="col" class="cone-type-header">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="type"
-                  >
-                    Silo-Typ
-                  </span>
+      <div class="card">
+        <h3 data-i18n="technicalData">
+          Technische Daten
+        </h3>
 
-                  <span
-                    class="cone-sub-heading"
-                    data-i18n="siloDiameter"
-                  >
-                    Silo Ø
-                  </span>
-                </th>
+        <!-- Erste Typengruppe -->
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="hopperHeight"
-                  >
-                    Trichterhöhe [m]
-                  </span>
+        <div class="technical-table-group">
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+          <h4
+            class="technical-table-title"
+            data-i18n="rvoSmallSeries"
+          >
+            Trogkettenförderer Typ NRL
+          </h4>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
+          <div class="technical-table-wrapper">
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="approximateWeight"
-                  >
-                    Gewicht [ca. kg]
-                  </span>
+            <table class="technical-table">
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+              <thead>
+                <tr>
+                  <th scope="col">Typ</th>
+                  <th scope="col">Motorleistung<br>[kW]</th>
+                  <th scope="col">
+                    Kettengeschw.<br>[m/s]
+                  </th>
+                  <th scope="col">
+                    Leistung*<br>[t/h]
+                  </th>
+                  <th scope="col">
+                    Einlauf Ø /<br>Auslauf Ø [mm]
+                  </th>
+                  <th scope="col">
+                    Länge<br>[m]
+                  </th>
+                </tr>
+              </thead>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
+              <tbody>
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="reducedVolume"
-                  >
-                    Mindervolumen [m³]
-                  </span>
+                <tr>
+                  <th scope="row">NRL 25</th>
+                  <td>1,1 - 2,2</td>
+                  <td>ca. 0,55</td>
+                  <td>25</td>
+                  <td>150</td>
+                  <td>bis 31</td>
+                </tr>
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+                <tr>
+                  <th scope="row">NRL 40</th>
+                  <td>1,1 - 3,0</td>
+                  <td>ca. 0,54</td>
+                  <td>40</td>
+                  <td>150</td>
+                  <td>bis 31</td>
+                </tr>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
-              </tr>
-            </thead>
+                <tr>
+                  <th scope="row">NRL 60</th>
+                  <td>2,2 - 4,0</td>
+                  <td>ca. 0,51</td>
+                  <td>60</td>
+                  <td>150</td>
+                  <td>bis 31</td>
+                </tr>
 
-            <tbody>
-              <tr>
-                <th scope="row">
-                  NL 4
-                  <span class="cone-silo-diameter">
-                    Ø 3,58 m
-                  </span>
-                </th>
+              </tbody>
 
-                <td>
-                  <span class="cone-values">
-                    <span>0,81</span>
-                    <span>1,45</span>
-                  </span>
-                </td>
+            </table>
 
-                <td>
-                  <span class="cone-values">
-                    <span>450</span>
-                    <span>750</span>
-                  </span>
-                </td>
+          </div>
 
-                <td>
-                  <span class="cone-values">
-                    <span>5</span>
-                    <span>12</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 5
-                  <span class="cone-silo-diameter">
-                    Ø 4,47 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1,04</span>
-                    <span>1,68</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>700</span>
-                    <span>1.050</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>11</span>
-                    <span>21</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 6
-                  <span class="cone-silo-diameter">
-                    Ø 5,36 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1,26</span>
-                    <span>1,90</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1.010</span>
-                    <span>1.400</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>19</span>
-                    <span>33</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 7
-                  <span class="cone-silo-diameter">
-                    Ø 6,26 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1,49</span>
-                    <span>2,13</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1.550</span>
-                    <span>1.950</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>31</span>
-                    <span>50</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 8
-                  <span class="cone-silo-diameter">
-                    Ø 7,15 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1,72</span>
-                    <span>2,36</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>2.080</span>
-                    <span>2.430</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>46</span>
-                    <span>72</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 9
-                  <span class="cone-silo-diameter">
-                    Ø 8,04 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1,95</span>
-                    <span>2,59</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>2.550</span>
-                    <span>2.950</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>66</span>
-                    <span>98</span>
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
-      </div>
 
         <!-- Zweite Typengruppe -->
 
         <div class="technical-table-group">
-        <h4
-          class="technical-table-title"
-          data-i18n="ventilationCone45"
-        >
-          Belüftungskonus 45°
-        </h4>
 
-        <div class="technical-table-wrapper cone-table-wrapper">
-          <table class="technical-table cone-technical-table">
-            <thead>
-              <tr>
-                <th scope="col" class="cone-type-header">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="type"
-                  >
-                    Silo-Typ
-                  </span>
+          <h4
+            class="technical-table-title"
+            data-i18n="rvoLargeSeries"
+          >
+            Trogkettenförderer Typ NR HD
+          </h4>
 
-                  <span
-                    class="cone-sub-heading"
-                    data-i18n="siloDiameter"
-                  >
-                    Silo Ø
-                  </span>
-                </th>
+          <div class="technical-table-wrapper">
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="hopperHeight"
-                  >
-                    Trichterhöhe [m]
-                  </span>
+            <table class="technical-table">
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+              <thead>
+                <tr>
+                  <th scope="col">Typ</th>
+                  <th scope="col">
+                    Motorleistung<br>[kW]
+                  </th>
+                  <th scope="col">
+                    Kettengeschw.<br>[m/s]
+                  </th>
+                  <th scope="col">
+                    Leistung*<br>[t/h]
+                  </th>
+                  <th scope="col">
+                    Einlauf Ø /<br>Auslauf Ø [mm]
+                  </th>
+                  <th scope="col">
+                    Länge<br>[m]
+                  </th>
+                </tr>
+              </thead>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
+              <tbody>
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="approximateWeight"
-                  >
-                    Gewicht [ca. kg]
-                  </span>
+                <tr>
+                  <th scope="row">NR 200/40</th>
+                  <td>1,5 - 4,0</td>
+                  <td>ca. 0,58</td>
+                  <td>40</td>
+                  <td>200</td>
+                  <td>bis 68</td>
+                </tr>
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+                <tr>
+                  <th scope="row">NR 200/60</th>
+                  <td>1,5 - 7,5</td>
+                  <td>ca. 0,58</td>
+                  <td>60</td>
+                  <td>200</td>
+                  <td>bis 68</td>
+                </tr>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
+                <tr>
+                  <th scope="row">NR 250/80</th>
+                  <td>2,2 - 7,5</td>
+                  <td>ca. 0,58</td>
+                  <td>80</td>
+                  <td>250</td>
+                  <td>bis 68</td>
+                </tr>
 
-                <th scope="col">
-                  <span
-                    class="cone-main-heading"
-                    data-i18n="reducedVolume"
-                  >
-                    Mindervolumen [m³]
-                  </span>
+                <tr>
+                  <th scope="row">NR 250/100</th>
+                  <td>1,1 - 11,0</td>
+                  <td>ca. 0,58</td>
+                  <td>100</td>
+                  <td>300</td>
+                  <td>bis 68</td>
+                </tr>
 
-                  <span class="cone-value-headings">
-                    <span
-                      class="cone-heading-normal"
-                      data-i18n="normalShort"
-                    >
-                      Normal
-                    </span>
+                <tr>
+                  <th scope="row">NR 350/120</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>120</td>
+                  <td>300</td>
+                  <td>bis 65</td>
+                </tr>
 
-                    <span
-                      class="cone-heading-raised"
-                      data-i18n="raisedShort"
-                    >
-                      Erhöht
-                    </span>
-                  </span>
-                </th>
-              </tr>
-            </thead>
+                <tr>
+                  <th scope="row">NR 350/140</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>140</td>
+                  <td>300</td>
+                  <td>bis 65</td>
+                </tr>
 
-            <tbody>
-              <tr>
-                <th scope="row">
-                  NL 4
-                  <span class="cone-silo-diameter">
-                    Ø 3,58 m
-                  </span>
-                </th>
+                <tr>
+                  <th scope="row">NR 350/160</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>160</td>
+                  <td>300</td>
+                  <td>bis 65</td>
+                </tr>
 
-                <td>
-                  <span class="cone-values">
-                    <span>1,59</span>
-                    <span>2,23</span>
-                  </span>
-                </td>
+                <tr>
+                  <th scope="row">NR 400/200</th>
+                  <td>3,0 - 30,0</td>
+                  <td>ca. 0,58</td>
+                  <td>200</td>
+                  <td>350/400</td>
+                  <td>bis 55</td>
+                </tr>
 
-                <td>
-                  <span class="cone-values">
-                    <span>690</span>
-                    <span>1.060</span>
-                  </span>
-                </td>
+              </tbody>
 
-                <td>
-                  <span class="cone-values">
-                    <span>11</span>
-                    <span>17</span>
-                  </span>
-                </td>
-              </tr>
+            </table>
 
-              <tr>
-                <th scope="row">
-                  NL 5
-                  <span class="cone-silo-diameter">
-                    Ø 4,47 m
-                  </span>
-                </th>
+          </div>
 
-                <td>
-                  <span class="cone-values">
-                    <span>2,04</span>
-                    <span>2,68</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1.200</span>
-                    <span>1.680</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>21</span>
-                    <span>31</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 6
-                  <span class="cone-silo-diameter">
-                    Ø 5,36 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>2,48</span>
-                    <span>3,12</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>1.700</span>
-                    <span>2.280</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>37</span>
-                    <span>52</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 7
-                  <span class="cone-silo-diameter">
-                    Ø 6,26 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>2,89</span>
-                    <span>3,53</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>2.900</span>
-                    <span>3.640</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>60</span>
-                    <span>91</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 8
-                  <span class="cone-silo-diameter">
-                    Ø 7,15 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>3,34</span>
-                    <span>4,16</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>3.550</span>
-                    <span>4.520</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>90</span>
-                    <span>131</span>
-                  </span>
-                </td>
-              </tr>
-
-              <tr>
-                <th scope="row">
-                  NL 9
-                  <span class="cone-silo-diameter">
-                    Ø 8,04 m
-                  </span>
-                </th>
-
-                <td>
-                  <span class="cone-values">
-                    <span>3,78</span>
-                    <span>4,42</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>4.200</span>
-                    <span>5.100</span>
-                  </span>
-                </td>
-
-                <td>
-                  <span class="cone-values">
-                    <span>130</span>
-                    <span>180</span>
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-                <p
+          <p
             class="technical-footnote"
             data-i18n="capacityFootnote"
           >
-            *erhöhter Unterbau mit ca. 600 mm Auslaufhöhe <br>
-            max. Schütthöhe 12 m; max. Ringe 15; 750 kg/m³ Schüttgewicht, ca. 14 % Feuchtigkeit
+            *Leistungen für lagerfähiges, trockenes und gereinigtes
+            Getreide, Sieb: Drahtgewebesieb 4,5 mm
           </p>
-    </div> 
+        </div>
+      </div>
     </section>
 
 <section id="gallery" class="page">
@@ -2338,8 +1586,8 @@ html.embedded #gallery {
     <div class="gallery-box" id="galleryBox">
       <img
         id="galleryImage"
-        src="bilder/konus/Konus_Bild_1.webp"
-        alt="Belüftungskonus"
+        src="bilder/getreidemuehle/RVO_Bild_1.png"
+        alt="Durchlaufvorreiniger Typ NDV"
 >
 
       <video
@@ -2386,10 +1634,10 @@ html.embedded #gallery {
         type="button"
         role="tab"
         aria-selected="true"
-        data-model="RVO-554"
-        onclick="selectProductModel('RVO-554')"
+        data-model="Typ-NR-HD"
+        onclick="selectProductModel('Typ-NR-HD')"
       >
-        RVO 554
+        Typ NR HD
       </button>
 
       <button
@@ -2398,17 +1646,17 @@ html.embedded #gallery {
         type="button"
         role="tab"
         aria-selected="false"
-        data-model="RVO-930"
-        onclick="selectProductModel('RVO-930')"
+        data-model="Typ-NRL"
+        onclick="selectProductModel('Typ-NRL')"
       >
-        RVO 930
+        Typ NRL
       </button>
     </div>
 
     <div class="model-viewer-box">
       <model-viewer
        id="productModel"
-       src="modelle/getreidemuehle/RVO-554.glb"
+       src="modelle/Trogkettenfoerderer/Trogkettenförderer_Typ_NR_HD.glb"
        alt="Interaktives 3-D-Modell der Hammermühle"
        camera-controls
        touch-action="none"
@@ -2459,7 +1707,7 @@ html.embedded #gallery {
           Prospekt
         </span>
         <h3 id="pdfTitle" data-i18n="pdfTitle">
-          Gesamtkatalog Reinigen
+          Gesamtkatalog Fördern
         </h3>
       </div>
 
@@ -2548,13 +1796,13 @@ document.addEventListener("DOMContentLoaded", function () {
     downloadBrochuresText:
       "Scannen Sie den QR-Code mit Ihrem Smartphone, um alle Prospekte und Produktinformationen direkt herunterzuladen.",
 
-    cleaningCatalog: "Gesamtkatalog Lagern",
+    cleaningCatalog: "Gesamtkatalog Fördern",
     cleaningCatalogText:
-      "Technische Informationen zu Lagersilos für die Innen- und Außenaufstellung sowie zu Fundamenten, Belüftung, Zubehör und Messtechnik.",
+      "Ausführliche technische Daten, Maße und weitere Informationen zur Trogkettenförderer sowie zu weiteren Produkten aus dem Bereich Fördern.",
 
-    cleaningBrochure: "Produktprospekt Lagern NLT & NLK",  
+    cleaningBrochure: "Produktprospekt Fördern",  
     cleaningBrochureText:
-      "Informationen über die Trichtersilos Typ NLT, die Lagersilos Typ NLK mit Belüftungskonus sowie den Belüftungskonus als separate Lösung.",
+      "Kompakter Überblick über unsere Produkte aus dem Bereich Fördern mit kurzen Informationen zu den einzelnen Produkten.",
 
     informationTitle: "Informationen",
     productTitle: "Trogkettenförderer Typ NR",
@@ -2577,26 +1825,19 @@ document.addEventListener("DOMContentLoaded", function () {
       "Energieeffiziente Förderung großer Materialmengen",
 
 
-    ventilationCone27: "Belüftungskonus 27°",
-    ventilationCone45: "Belüftungskonus 45°",
-
-    hopperHeight: "Trichterhöhe [m]",
-    approximateWeight: "Gewicht [ca. kg]",
-    reducedVolume: "Mindervolumen [m³]",
-
-    normalShort: "Normal",
-    raisedShort: "* Erhöht",
+    rvoSmallSeries: "Trogkettenförderer Typ NRL",
+    rvoLargeSeries: "Trogkettenförderer Typ NR HD",
 
     modelComparison: "Baugrößen im Vergleich",
     technicalData: "Technische Daten",
-    type: "Silo-Typ",
+    type: "Typ",
     inletOutletDiameter:
     "Durchmesser Ein-/Auslauf [mm]",
-    screenArea: "Siebfläche [m²]",
+    screenArea: "Länge [m]",
     screenWidth: "Siebbreite [mm]",
-    numberOfBeaters: "Anzahl der Schläger",
+    numberOfBeaters: "Einlauf Ø / Endauslauf Ø [mm]",
     motorPower: "Motorleistung [kW]",
-    grindingCapacity: "Mahlleistung* [kg/h]",
+    grindingCapacity: "Leistung* [t/h]",
     grainType: "Gerste/Weizen",
     inlet: "Einlauf Ø [mm]",
     outlet: "Auslauf Ø [mm]",
@@ -2607,7 +1848,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "bei 750 kg/m³ Schüttgewicht und 14 % Restfeuchte",
 
     capacityFootnote:
-      "*erhöhter Unterbau mit ca. 600 mm Auslaufhöhe <br> max. Schütthöhe 12 m; max. Ringe 15; 750 kg/m³ Schüttgewicht, ca. 14 % Feuchtigkeit",  
+      "*Leistungen für lagerfähiges, trockenes und gereinigtes Getreide, Sieb: Drahtgewebesieb 4,5 mm",  
 
     galleryTitle: "Galerie",
     previous: "Zurück",
@@ -2633,9 +1874,9 @@ document.addEventListener("DOMContentLoaded", function () {
   },
 
   en: {
-    homeTitle: "Ventilation Cone<br>for Storage Silos",
+    homeTitle: "Hammer Mill<br>Type RVO",
     homeDescription:
-      "Available with a 27° or 45° incline for even air distribution and easy residual discharge in new and existing installations.",
+      "Efficient grinding for consistent product quality and reliable feed preparation processes.",
     learnMore: "LEARN MORE",
 
     brochuresTitle: "Brochures",
@@ -2652,46 +1893,39 @@ document.addEventListener("DOMContentLoaded", function () {
       "A compact overview of our milling and mixing products, including brief information on each product.",
 
     informationTitle: "Information",
-    productTitle: "Ventilation Cone with a 27° or 45° Incline for Storage Silos",
+    productTitle: "Hammer mill without blower, Type RVO",
 
     productDescription:
-      "The fully perforated, galvanized structure separates the grain from the silo floor and ensures even air distribution across the entire surface.<br><br>" +
-      "The 27° or 45° incline allows the silo to be emptied almost completely, eliminating the need for a sweep auger.<br><br>" +
-      "The solution can be integrated into new installations or retrofitted into existing round silos. A raised support structure also allows various discharge systems to be installed without requiring a recess in the foundation.",
+      "High grinding capacity with low energy consumption.<br><br>" +
+      "The unique three-part screen system, combined with bidirectional rotation, allows the grist structure to be precisely adapted to different requirements.<br><br>" +
+      "48 beaters and large screen surfaces ensure uniform grinding, high throughput and reliable feed preparation with virtually dust-free operation.",
 
     advantages: "Advantages",
 
     advantage1:
-     "Even ventilation throughout the stored material",
+     "Robust and durable machine construction",
 
     advantage2:
-      "Almost complete discharge due to the cone incline",
+      "Flexible adaptation to different feed mixtures",
 
     advantage3:
-      "Suitable for new installations and for retrofitting existing round silos",
+      "Cost-effective operation due to low energy consumption",
 
     advantage4:
-      "Quick and straightforward installation",
+      "Easy integration into existing systems",
 
     advantage5:
-      "No recess in the foundation required with a raised support structure",
+      "Reliable protection against metallic foreign objects",
 
     advantage6:
-      "Easy cleaning above and below the cone",
+      "Consistent grist quality for optimum feed results",
 
-    ventilationCone27: "Ventilation cone 27°",
-    ventilationCone45: "Ventilation cone 45°",
+    rvoSmallSeries: "RVO 354 to RVO 854",
+    rvoLargeSeries: "RVO 922 to RVO 1075",
 
-    hopperHeight: "Hopper height [m]",
-    approximateWeight: "Approx. weight [kg]",
-    reducedVolume: "Reduced volume [m³]",
-
-    normalShort: "Standard",
-    raisedShort: "* Raised",
-
-    modelComparison: "Configuration options at a glance",
+    modelComparison: "Model sizes at a glance",
     technicalData: "Technical data",
-    type: "Silo-Type",
+    type: "Type",
     inletOutletDiameter:
     "Inlet/outlet diameter [mm]",
     screenArea: "Screen area [m²]",
@@ -2709,7 +1943,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "at a bulk density of 750 kg/m³ and 14% residual moisture",
 
     capacityFootnote:
-      "*Raised substructure with an outlet height of approx. 600 mm <br> Max. filling height: 12 m; max. number of rings: 15; bulk density: 750 kg/m³; moisture content: approx. 14%",  
+      "*Capacities for storable, dry and cleaned grain, screen: 4.5 mm wire mesh screen",  
 
     galleryTitle: "Gallery",
     previous: "Previous",
@@ -2884,27 +2118,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const mediaItems = [
     {
       type: "image",
-      src: "bilder/konus/Konus_Bild_2.webp"
+      src: "bilder/getreidemuehle/RVO_Bild_1.png"
     },
     {
       type: "image",
-      src: "bilder/konus/Konus_Bild_1.webp"
+      src: "bilder/getreidemuehle/RVO_Bild_2.jpg"
     },
     {
       type: "image",
-      src: "bilder/konus/Konus_Bild_3.webp"
+      src: "bilder/getreidemuehle/RVO_Bild_3.jpg"
     },
     {
       type: "image",
-      src: "bilder/konus/Konus_Bild_4.webp"
+      src: "bilder/getreidemuehle/RVO_Bild_4.jpg"
     },  
     {
       type: "image",
-      src: "bilder/konus/Konus_Bild_5.webp"
-    },  
-    {
-      type: "image",
-      src: "bilder/konus/Konus_Bild_Titel.webp"
+      src: "bilder/getreidemuehle/RVO_Bild_5.jpg"
     },   
   ];
 
@@ -2912,9 +2142,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let inactivityTimer;
 
   const heroImages = [
-  "bilder/konus/Konus_Bild_Titel.webp",
-  "bilder/konus/Konus_Bild_1.webp",
-  "bilder/konus/Konus_Bild_2.webp"
+  "bilder/getreidemuehle/RVO_Bild_Titel.webp",
+  "bilder/getreidemuehle/RVO_Bild_1.png",
+  "bilder/getreidemuehle/RVO_Bild_2.jpg"
   ];
 
   let currentHero = 0;
@@ -3115,24 +2345,24 @@ const DEFAULT_CAMERA_TARGET = "auto auto auto";
 const DEFAULT_FIELD_OF_VIEW = "30deg";
 
 const productModels = {
-  "RVO-554": {
-    src: "modelle/getreidemuehle/RVO-554.glb",
+  "Typ-NR-HD": {
+    src: "modelle/Trogkettenfoerderer/Trogkettenförderer_Typ_NR_HD.glb",
     altDe:
-      "3-D-Modell der Hammermühle Typ RVO 554",
+      "3-D-Modell Trogkettenförderer Typ NR HD",
     altEn:
-      "3D model of the Hammer mill type RVO 554"
+      "3D model of the Trough Chain Conveyor Type NR HD"
   },
 
-  "RVO-930": {
-    src: "modelle/getreidemuehle/RVO-930.glb",
+  "Typ-NRL": {
+    src: "modelle/Trogkettenfoerderer/Trogkettenförderer_Typ_NRL.glb",
     altDe:
-      "3-D-Modell der Hammermühle Typ RVO 930",
+      "3-D-Modell Trogkettenförderer Typ NRL",
     altEn:
-      "3D model of the Hammer mill type RVO 930"
+      "3D model of the Trough Chain Conveyor Type NRL"
   },
 };
 
-const DEFAULT_PRODUCT_MODEL = "RVO-554";
+const DEFAULT_PRODUCT_MODEL = "Typ-NR-HD";
 
 let selectedProductModel =
   DEFAULT_PRODUCT_MODEL;
