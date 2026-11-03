@@ -481,7 +481,8 @@ ul {
 
 .technical-table {
   width: 100%;
-  min-width: 700px;
+  min-width: 0;
+  table-layout: auto;
   border-collapse: collapse;
   background: #ffffff;
   color: #111827;
@@ -513,11 +514,13 @@ ul {
 }
 
 .technical-table thead th:first-child {
-  text-align: left;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
 }
 
 .technical-table tbody th {
-  width: 40%;
+  width: 18%;
   background: #f1f5f9;
   color: #111827;
   font-weight: 600;
@@ -537,6 +540,14 @@ ul {
   color: #475569;
   font-size: 13px;
   font-weight: normal;
+}
+
+.technical-footnote {
+  margin: 12px 2px 0;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.4;
+  font-style: italic;
 }
 
 @media (orientation: landscape) {
@@ -1457,7 +1468,7 @@ html.embedded #gallery {
       </h3>
 
        <img
-         src="bilder/silos/Silo_Bild_Zeichnung.webp"
+         src="bilder/gemeinsam/Annahmetrogkettenfoerderer_Bild_Zeichnung.webp"
          alt="JET-Filter Modelle im Vergleich"
          class="comparison-image"
        >
@@ -1468,180 +1479,217 @@ html.embedded #gallery {
           Technische Daten
         </h3>
 
-          <div class="technical-table-wrapper silo-summary-wrapper">
-            <table class="technical-table silo-summary-table">
+        <!-- Erste Typengruppe -->
+
+        <div class="technical-table-group">
+
+          <h4
+            class="technical-table-title"
+            data-i18n="rvoSmallSeries"
+          >
+            Annahmetrogkettenfoerderer Typ NRL
+          </h4>
+
+          <div class="technical-table-wrapper">
+
+            <table class="technical-table">
+
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="tableType">
+                    Typ
+                  </th>
+
+                  <th scope="col" data-i18n="tableMotorPower">
+                    Motorleistung<br>[kW]
+                  </th>
+
+                  <th scope="col" data-i18n="tableChainSpeed">
+                    Kettengeschw.<br>[m/s]
+                  </th>
+
+                  <th scope="col" data-i18n="tableCapacity">
+                    Leistung*<br>[t/h]
+                  </th>
+
+                  <th scope="col" data-i18n="tableInletOutlet">
+                    Einlauf Ø /<br>Auslauf Ø [mm]
+                  </th>
+
+                  <th scope="col" data-i18n="tableLength">
+                    Länge<br>[m]
+                  </th>
+                </tr>
+              </thead>
+
               <tbody>
-                <tr class="silo-table-section">
-                  <th
-                    colspan="2"
-                    scope="colgroup"
-                    data-i18n="siloTypeSmall"
-                  >
-                    Silo-Typ NL 2-11
-                  </th>
 
                 <tr>
-                  <th scope="row" data-i18n="siloDiameter">
-                    Durchmesser [m]
-                  </th>
-                  <td>1,79 - 9,83</td>
+                  <th scope="row">NRL 25</th>
+                  <td>1,5 - 3,0</td>
+                  <td>ca. 0,55</td>
+                  <td>25</td>
+                  <td>150</td>
+                  <td>bis 13</td>
                 </tr>
 
                 <tr>
-                  <th scope="row" data-i18n="numberOfRings">
-                    Ringanzahl
-                  </th>
-                  <td>5 - 31</td>
+                  <th scope="row">NRL 40</th>
+                  <td>1,5 - 4,0</td>
+                  <td>ca. 0,54</td>
+                  <td>40</td>
+                  <td>150</td>
+                  <td>bis 13</td>
                 </tr>
 
                 <tr>
-                  <th scope="row" data-i18n="siloHeightWithoutRoof">
-                    Silohöhe ohne Dach [m]
-                  </th>
-                  <td>4,29 - 26,13</td>
+                  <th scope="row">NRL 60</th>
+                  <td>3,0 - 5,5</td>
+                  <td>ca. 0,51</td>
+                  <td>60</td>
+                  <td>150</td>
+                  <td>bis 13</td>
                 </tr>
 
-                <tr>
-                  <th scope="row" data-i18n="usableVolume">
-                    Nutzvolumen [m³]
-                  </th>
-                  <td>10,77 - 1.983,85</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="storageCapacity">
-                    Lagerkapazität* [t]
-                  </th>
-                  <td>8,08 - 1.487,89</td>
-                </tr>
-
-                <tr class="silo-table-section">
-                  <th
-                    colspan="2"
-                    scope="colgroup"
-                    data-i18n="roofData"
-                  >
-                    Dach
-                  </th>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="roofHeight">
-                    Dachhöhe [m]
-                  </th>
-                  <td>0,5 - 2,82</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="roofEquipment">
-                    Dachausstattung
-                  </th>
-                  <td data-i18n="roofEquipmentValue">
-                    Dachhaube und eine Dachluke
-                  </td>
-                </tr>
               </tbody>
+
             </table>
+
+          </div>
+
+        </div>
+
+        <!-- Zweite Typengruppe -->
+
+        <div class="technical-table-group">
+
+          <h4
+            class="technical-table-title"
+            data-i18n="rvoLargeSeries"
+          >
+            Annahmetrogkettenfoerderer Typ NR HD
+          </h4>
+
+          <div class="technical-table-wrapper">
+
+            <table class="technical-table">
+
+              <thead>
+                <tr>
+                  <th scope="col" data-i18n="tableType">
+                    Typ
+                  </th>
+
+                  <th scope="col" data-i18n="tableMotorPower">
+                    Motorleistung<br>[kW]
+                  </th>
+
+                  <th scope="col" data-i18n="tableChainSpeed">
+                    Kettengeschw.<br>[m/s]
+                  </th>
+
+                  <th scope="col" data-i18n="tableCapacity">
+                    Leistung*<br>[t/h]
+                  </th>
+
+                  <th scope="col" data-i18n="tableInletOutlet">
+                    Einlauf Ø /<br>Auslauf Ø [mm]
+                  </th>
+
+                  <th scope="col" data-i18n="tableLength">
+                    Länge<br>[m]
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <th scope="row">NR 200/40</th>
+                  <td>1,5 - 4,0</td>
+                  <td>ca. 0,58</td>
+                  <td>40</td>
+                  <td>200</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 200/60</th>
+                  <td>1,5 - 7,5</td>
+                  <td>ca. 0,58</td>
+                  <td>60</td>
+                  <td>200</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 250/80</th>
+                  <td>2,2 - 7,5</td>
+                  <td>ca. 0,58</td>
+                  <td>80</td>
+                  <td>250</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 250/100</th>
+                  <td>1,1 - 11,0</td>
+                  <td>ca. 0,58</td>
+                  <td>100</td>
+                  <td>300</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 350/120</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>120</td>
+                  <td>300</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 350/140</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>140</td>
+                  <td>300</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 350/160</th>
+                  <td>3,0 - 18,5</td>
+                  <td>ca. 0,58</td>
+                  <td>160</td>
+                  <td>300</td>
+                  <td>bis 23</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">NR 400/200</th>
+                  <td>3,0 - 30,0</td>
+                  <td>ca. 0,58</td>
+                  <td>200</td>
+                  <td>350/400</td>
+                  <td>bis 25</td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
           </div>
 
           <p
             class="technical-footnote"
-            data-i18n="smallSeriesRoofNote"
+            data-i18n="capacityFootnote"
           >
-
+            *Leistungen für lagerfähiges, trockenes und gereinigtes
+            Getreide, Sieb: Drahtgewebesieb 4,5 mm
           </p>
-
-          <div class="technical-table-wrapper silo-summary-wrapper">
-            <table class="technical-table silo-summary-table">
-              <tbody>
-                <tr class="silo-table-section">
-                  <th
-                    colspan="2"
-                    scope="colgroup"
-                    data-i18n="siloTypeLarge"
-                  >
-                    Silo-Typ NL 12-30
-                  </th>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="siloDiameter">
-                    Durchmesser [m]
-                  </th>
-                  <td>10,73 - 26,81</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="numberOfRings">
-                    Ringanzahl
-                  </th>
-                  <td>7 - 30</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="siloHeightWithoutRoof">
-                    Silohöhe ohne Dach [m]
-                  </th>
-                  <td>5,97 - 25,29</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="usableVolume">
-                    Nutzvolumen [m³]
-                  </th>
-                  <td>539,41 - 4.062,31</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="storageCapacity">
-                    Lagerkapazität* [t]
-                  </th>
-                  <td>404,56 - 3.046,73</td>
-                </tr>
-
-                <tr class="silo-table-section">
-                  <th
-                    colspan="2"
-                    scope="colgroup"
-                    data-i18n="roofData"
-                  >
-                    Dach
-                  </th>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="roofHeight">
-                    Dachhöhe [m]
-                  </th>
-                  <td>2,92 - 5,72</td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="roofEquipment">
-                    Dachausstattung
-                  </th>
-                  <td data-i18n="roofEquipmentValue">
-                    Dachhaube und eine Dachluke
-                  </td>
-                </tr>
-
-                <tr>
-                  <th scope="row" data-i18n="roofOnRequest">
-                    Dach auf Anfrage
-                  </th>
-                  <td>NL 26, NL 27, NL 28, NL 30</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p
-            class="technical-footnote"
-            data-i18n="technicalRangeNote"
-          >
-            *Lagerkapazität bei 750 kg/m³ Schüttgewicht. Die verfügbaren
-            Ringzahlen und technischen Werte sind vom gewählten Silotyp abhängig.
-          </p>
+        </div>
       </div>
     </section>
 
@@ -1704,10 +1752,11 @@ html.embedded #gallery {
         type="button"
         role="tab"
         aria-selected="true"
-        data-model="JET-Filter_NJF2"
-        onclick="selectProductModel('JET-Filter_NJF2')"
+        data-model="Typ_NR_HD"
+        onclick="selectProductModel('Typ_NR_HD')"
+        data-i18n="modelTypeNRHD"
       >
-        JET-Filter NJF2
+        Typ NR HD
       </button>
 
       <button
@@ -1716,17 +1765,18 @@ html.embedded #gallery {
         type="button"
         role="tab"
         aria-selected="false"
-        data-model="JET-Filter_Duo"
-        onclick="selectProductModel('JET-Filter_Duo')"
+        data-model="Typ_NRL"
+        onclick="selectProductModel('Typ_NRL')"
+        data-i18n="modelTypeNRL"
       >
-        JET-Filter Duo
+        Typ NRL
       </button>
     </div>
 
     <div class="model-viewer-box">
       <model-viewer
        id="productModel"
-       src="modelle/jet-filter/JET-Filter_NJF2.glb"
+       src="modelle/Trogkettenfoerderer/Annahmetrogkettenförderer_Typ_NR_HD.glb"
        alt="Interaktives 3-D-Modell des JET-Filters"
        camera-controls
        touch-action="none"
@@ -1856,9 +1906,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
  const translations = {
   de: {
-    homeTitle: "Getreidelagersilos<br>Typ NL",
+    homeTitle: "Annahme-<br>trogkettenförderer<br>Typ NR",
     homeDescription:
-      "Sichere Lagerbedingungen im Außenbereich für dauerhaften Schutz und langfristigen Erhalt der Getreidequalität.",
+      "Leistungsstarke und produktschonende Annahme großer Schüttgutmengen für einen zuverlässigen Weitertransport.",
     learnMore: "MEHR ERFAHREN",
 
     brochuresTitle: "Prospekte",
@@ -1879,65 +1929,40 @@ document.addEventListener("DOMContentLoaded", function () {
       "Informationen zu den Lagersilos Typ NL 12-30 für die Außenaufstellung.",  
 
     informationTitle: "Informationen",
-    productTitle: "Getreidelagersilos Typ NL für die Außenaufstellung",
+    productTitle: "Annahmetrogkettenförderer Typ NR",
     productDescription:
-      "Eigene Lagerkapazitäten ermöglichen es, Erntemengen flexibel aufzunehmen, Futtergetreide bedarfsgerecht bereitzuhalten und den Verkaufszeitpunkt unabhängiger von Marktpreisen und vorhandener Logistik zu wählen.<br><br>" +
-      "Getreidelagersilos Typ NL schaffen kontrollierbare Lagerbedingungen für den langfristigen Erhalt der Getreidequalität. Die stabile, korrosionsbeständige Konstruktion schützt das Lagergut dauerhaft vor Witterungseinflüssen, Feuchtigkeit, Schadnagern und Vögeln.<br><br>" +
-      "Beschickungs-, Entnahme-, Belüftungs- und Überwachungstechnik kann passend zum Betrieb, zum Lagergut und zur gewünschten Lagerkapazität integriert werden.",
+      "Der Annahmetrogkettenförderer ist für die direkte Aufnahme und zuverlässige Weiterförderung rieselfähiger Schüttgüter konzipiert. Durch den Einbau in einen Annahmesumpf ermöglicht er einen gleichmäßigen Materialfluss und unterstützt eine effiziente Beschickung nachfolgender Förder- und Lagertechnik.<br><br>" +
+      "Die verzinkte Konstruktion ist mit einem seitlichen Einlauf und einer spitzen Abdeckung für die Annahme ausgestattet. Je nach Anforderung stehen die NRL-Baureihe für Jahresumschläge bis 5.000 Tonnen sowie die leistungsstärkere HD-Baureihe für höhere Umschlagmengen zur Verfügung. Die Förderung kann waagerecht oder mit einer Steigung von bis zu 5° erfolgen.",
 
     advantages: "Vorteile",
     advantage1:
-      "Eigene Fertigung der Silobauteile aus Qualitätsstahlblechen",
+      "Schnelle Aufnahme angelieferter Schüttgüter",
     advantage2:
-      "Stabile Silowände durch flache Wellung und geringe Schraubenabstände",
+      "Gleichmäßige Beschickung der nachfolgenden Fördertechnik",
     advantage3:
-      "Durchgehende C-Profilstützen bis zum Silodach",
+      "Schonender Transport bei geringer Kornbeschädigung",
     advantage4:
-      "Typenstatik für Silo und Fundament nach Eurocode",
+      "Flexible Einbindung in Annahme- und Lageranlagen",
     advantage5:
-      "Steile 30°-Silodächer für einen sicheren Wasserablauf",
+      "Kontrollierter Materialfluss durch Fördermengenbegrenzung",
     advantage6:
-      "Anpassung an erhöhte Schnee-, Wind- und weitere Standortlasten",
+      "Hohe Betriebssicherheit durch Sicherheitsabschaltklappe",
 
-    modelComparison: "Siloaufbau und Ausstattung",
+    modelComparison: "Baureihen im Vergleich",
     technicalData: "Technische Daten",
-    type: "Typ",
-    filter_count: "Filteranzahl [Stück]",
-    filter_length: "Filterlänge [mm]",
-    filter_diameter: "Filter-Ø [mm]",
-    airflow_rate: "Luftvolumenstrom [m³/h]",
 
+    tableType: "Typ",
+    tableMotorPower: "Motorleistung<br>[kW]",
+    tableChainSpeed: "Kettengeschw.<br>[m/s]",
+    tableCapacity: "Leistung*<br>[t/h]",
+    tableInletOutlet: "Einlauf Ø /<br>Auslauf Ø [mm]",
+    tableLength: "Länge<br>[m]",
 
-    roofData:
-    "Silodach",
-    siloSeriesSmall:
-      "Typ NL 2-11",
-    siloSeriesLarge:
-      "Typ NL 12-30",
-    siloType:
-      "Silo-Typ",
-    siloDiameter:
-      "Durchmesser [m]",
-    numberOfRings:
-      "Ringanzahl",
-    siloHeightWithoutRoof:
-      "Silohöhe ohne Dach [m]",
-    usableVolume:
-      "Nutzvolumen [m³]",
-    storageCapacity:
-      "Lagerkapazität* [t]",
-    roofHeight:
-      "Dachhöhe [m]",
-    roofEquipment:
-      "Dachausstattung",
-    roofEquipmentValue:
-      "Dachhaube und eine Dachluke",
-    roofOnRequest:
-      "Dach auf Anfrage",
-    smallSeriesRoofNote:
-      "",
-    technicalRangeNote:
-      "*Lagerkapazität bei 750 kg/m³ Schüttgewicht. Die verfügbaren Ringzahlen und technischen Werte sind vom gewählten Silotyp abhängig.",
+    capacityFootnote:
+      "*Leistung bei einem Schüttgewicht von 750 kg/m³ und ca. 14 % Kornfeuchte",  
+
+    modelTypeNRHD: "Typ NR HD",
+    modelTypeNRL: "Typ NRL",
 
     galleryTitle: "Galerie",
     previous: "Zurück",
@@ -1963,7 +1988,7 @@ document.addEventListener("DOMContentLoaded", function () {
   },
 
   en: {
-    homeTitle: "Grain storage silos<br>Type NL",
+    homeTitle: "Intake Trough<br>Chain Conveyor<br>Type NR",
     homeDescription:
       "Safe outdoor storage conditions for lasting protection and long-term preservation of grain quality.",
     learnMore: "LEARN MORE",
@@ -1986,71 +2011,51 @@ document.addEventListener("DOMContentLoaded", function () {
       "Information on Type NL 12-30 storage silos for outdoor installation.",  
 
     informationTitle: "Information",
-    productTitle: "Grain storage silos, Type NL, for outdoor installation",
+    productTitle: "Intake Trough Chain Conveyor Type NR",
     productDescription:
-      "Having dedicated storage capacity provides greater flexibility in handling harvest volumes, keeping feed grain available as required and choosing the most favourable time to sell, with less dependence on market prices and existing logistics.<br><br>" +
-      "Type NL grain storage silos provide controlled storage conditions for the long-term preservation of grain quality. Their stable, corrosion-resistant construction provides lasting protection for the stored grain against weather conditions, moisture, rodents and birds.<br><br>" +
-      "Filling, discharge, ventilation and monitoring equipment can be integrated to suit the operation, the stored product and the required storage capacity.",
+      "The intake trough chain conveyor is designed for the direct intake and reliable onward conveying of free-flowing bulk materials. Installed in an intake pit, it ensures a consistent material flow and supports the efficient feeding of downstream conveying and storage equipment.<br><br>" +
+      "The galvanized structure features a side inlet and a peaked cover for material intake. Depending on the requirements, the NRL series is available for annual throughput of up to 5,000 tonnes, while the higher-performance HD series is designed for larger throughput volumes. Material can be conveyed horizontally or at an incline of up to 5°.",
 
     advantages: "Advantages",
     advantage1:
-      "In-house production of silo components from quality steel sheets",
-    advantage2:
-      "Stable silo walls through shallow corrugations and closely spaced bolted connections",
-    advantage3:
-      "Continuous C-section supports extending to the silo roof",
-    advantage4:
-      "Structural calculations for the silo and foundation in accordance with Eurocode",
-    advantage5:
-      "Steep 30° silo roofs for effective rainwater drainage",
-    advantage6:
-      "Individual adaptation to increased snow loads, wind loads and other site-specific requirements",
+      "Fast intake of delivered bulk materials",
 
-    modelComparison: "Silo design and equipment",
+    advantage2:
+      "Consistent feeding of downstream conveying equipment",
+
+    advantage3:
+      "Gentle conveying with minimal grain damage",
+
+    advantage4:
+      "Flexible integration into intake and storage systems",
+
+    advantage5:
+      "Controlled material flow through conveying capacity regulation",
+
+    advantage6:
+      "High operational reliability through a safety shut-off flap",
+
+    modelComparison: "Product Series at a Glance",
     technicalData: "Technical data",
-    type: "Type",
-    filter_count: "Number of filters [pcs.]",
-    filter_length: "Filter length [mm]",
-    filter_diameter: "Filter diameter [mm]",
-    airflow_rate: "Airflow rate [m³/h]",
+
+    tableType: "Type",
+    tableMotorPower: "Motor power<br>[kW]",
+    tableChainSpeed: "Chain speed<br>[m/s]",
+    tableCapacity: "Capacity*<br>[t/h]",
+    tableInletOutlet: "Inlet Ø /<br>outlet Ø [mm]",
+    tableLength: "Length<br>[m]",
+
+    capacityFootnote:
+      "*Capacity based on a bulk density of 750 kg/m³ and approximately 14% grain moisture",   
+
+    modelTypeNRHD: "Type NR HD",
+    modelTypeNRL: "Type NRL",
 
     galleryTitle: "Gallery",
     previous: "Previous",
     next: "Next",
     galleryHint:
       "Swipe left or right to browse through the gallery.",
-
-
-    roofData:
-      "Silo roof",  
-    siloSeriesSmall:
-      "Type NL 2-11",
-    siloSeriesLarge:
-      "Type NL 12-30",
-    siloType:
-      "Silo type",
-    siloDiameter:
-      "Diameter [m]",
-    numberOfRings:
-      "Number of rings",
-    siloHeightWithoutRoof:
-      "Silo height without roof [m]",
-    usableVolume:
-      "Usable volume [m³]",
-    storageCapacity:
-      "Storage capacity* [t]",
-    roofHeight:
-      "Roof height [m]",
-    roofEquipment:
-      "Roof equipment",
-    roofEquipmentValue:
-      "Roof cap and one roof hatch",
-    roofOnRequest:
-      "Roof available on request",
-    smallSeriesRoofNote:
-      "Roof heights for NL 3 to NL 11. No roof height is specified for NL 2 in the brochure.",
-    technicalRangeNote:
-      "*Storage capacity based on a bulk density of 750 kg/m³. Available ring numbers and technical values depend on the selected silo type.",  
 
     openModel: "View product in 3D",
     closeModel: "Back to gallery",
@@ -2450,24 +2455,24 @@ const DEFAULT_CAMERA_TARGET = "auto auto auto";
 const DEFAULT_FIELD_OF_VIEW = "30deg";
 
 const productModels = {
-  "JET-Filter_NJF2": {
-    src: "modelle/jet-filter/JET-Filter_NJF2.glb",
+  "Typ_NR_HD": {
+    src: "modelle/Trogkettenfoerderer/Annahmetrogkettenförderer_Typ_NR_HD.glb",
     altDe:
-      "3-D-Modell des JET-Filters NJF2",
+      "3-D-Modell Annahmetrogkettenförderer Typ NR HD",
     altEn:
-      "3D model of the JET-Filter NJF2"
+      "3D model of the Intake Trough Chain Conveyor Type NR HD"
   },
 
-  "JET-Filter_Duo": {
-    src: "modelle/jet-filter/JET-Filter_Duo.glb",
+  "Typ_NRL": {
+    src: "modelle/Trogkettenfoerderer/Annahmetrogkettenförderer_Typ_NRL.glb",
     altDe:
-      "3-D-Modell des JET-Filters Duo",
+      "3-D-Modell Annahmetrogkettenförderer Typ NRL",
     altEn:
-      "3D model of the JET-Filter Duo"
+      "3D model of the Intake Trough Chain Conveyor Type NRL"
   },
 };
 
-const DEFAULT_PRODUCT_MODEL = "JET-Filter_NJF2";
+const DEFAULT_PRODUCT_MODEL = "Typ_NR_HD";
 
 let selectedProductModel =
   DEFAULT_PRODUCT_MODEL;

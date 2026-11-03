@@ -1394,18 +1394,27 @@ html.embedded #gallery {
 
               <thead>
                 <tr>
-                  <th scope="col">Typ</th>
-                  <th scope="col">Motorleistung<br>[kW]</th>
-                  <th scope="col">
+                  <th scope="col" data-i18n="tableType">
+                    Typ
+                  </th>
+
+                  <th scope="col" data-i18n="tableMotorPower">
+                    Motorleistung<br>[kW]
+                  </th>
+
+                  <th scope="col" data-i18n="tableChainSpeed">
                     Kettengeschw.<br>[m/s]
                   </th>
-                  <th scope="col">
+
+                  <th scope="col" data-i18n="tableCapacity">
                     Leistung*<br>[t/h]
                   </th>
-                  <th scope="col">
+
+                  <th scope="col" data-i18n="tableInletOutlet">
                     Einlauf Ø /<br>Auslauf Ø [mm]
                   </th>
-                  <th scope="col">
+
+                  <th scope="col" data-i18n="tableLength">
                     Länge<br>[m]
                   </th>
                 </tr>
@@ -1464,25 +1473,32 @@ html.embedded #gallery {
             <table class="technical-table">
 
               <thead>
-                <tr>
-                  <th scope="col">Typ</th>
-                  <th scope="col">
-                    Motorleistung<br>[kW]
-                  </th>
-                  <th scope="col">
-                    Kettengeschw.<br>[m/s]
-                  </th>
-                  <th scope="col">
-                    Leistung*<br>[t/h]
-                  </th>
-                  <th scope="col">
-                    Einlauf Ø /<br>Auslauf Ø [mm]
-                  </th>
-                  <th scope="col">
-                    Länge<br>[m]
-                  </th>
-                </tr>
-              </thead>
+              <tr>
+                <th scope="col" data-i18n="tableType">
+                  Typ
+                </th>
+
+                <th scope="col" data-i18n="tableMotorPower">
+                  Motorleistung<br>[kW]
+                </th>
+
+                <th scope="col" data-i18n="tableChainSpeed">
+                  Kettengeschw.<br>[m/s]
+                </th>
+
+                <th scope="col" data-i18n="tableCapacity">
+                  Leistung*<br>[t/h]
+                </th>
+
+                <th scope="col" data-i18n="tableInletOutlet">
+                  Einlauf Ø /<br>Auslauf Ø [mm]
+                </th>
+
+                <th scope="col" data-i18n="tableLength">
+                  Länge<br>[m]
+                </th>
+              </tr>
+            </thead>
 
               <tbody>
 
@@ -1636,6 +1652,7 @@ html.embedded #gallery {
         aria-selected="true"
         data-model="Typ-NR-HD"
         onclick="selectProductModel('Typ-NR-HD')"
+        data-i18n="modelTypeNRHD"
       >
         Typ NR HD
       </button>
@@ -1648,6 +1665,7 @@ html.embedded #gallery {
         aria-selected="false"
         data-model="Typ-NRL"
         onclick="selectProductModel('Typ-NRL')"
+        data-i18n="modelTypeNRL"
       >
         Typ NRL
       </button>
@@ -1828,27 +1846,21 @@ document.addEventListener("DOMContentLoaded", function () {
     rvoSmallSeries: "Trogkettenförderer Typ NRL",
     rvoLargeSeries: "Trogkettenförderer Typ NR HD",
 
-    modelComparison: "Baugrößen im Vergleich",
+    modelComparison: "Baureihen im Vergleich",
     technicalData: "Technische Daten",
-    type: "Typ",
-    inletOutletDiameter:
-    "Durchmesser Ein-/Auslauf [mm]",
-    screenArea: "Länge [m]",
-    screenWidth: "Siebbreite [mm]",
-    numberOfBeaters: "Einlauf Ø / Endauslauf Ø [mm]",
-    motorPower: "Motorleistung [kW]",
-    grindingCapacity: "Leistung* [t/h]",
-    grainType: "Gerste/Weizen",
-    inlet: "Einlauf Ø [mm]",
-    outlet: "Auslauf Ø [mm]",
-    extractionFan: "Absauggebläse [kW]",
-    airCapacity: "Luftleistung [m³/h]",
-    cleaningCapacity: "Reinigungsleistung [t/h]",
-    cleaningCapacityNote:
-      "bei 750 kg/m³ Schüttgewicht und 14 % Restfeuchte",
+
+    tableType: "Typ",
+    tableMotorPower: "Motorleistung<br>[kW]",
+    tableChainSpeed: "Kettengeschw.<br>[m/s]",
+    tableCapacity: "Leistung*<br>[t/h]",
+    tableInletOutlet: "Einlauf Ø /<br>Auslauf Ø [mm]",
+    tableLength: "Länge<br>[m]",
 
     capacityFootnote:
-      "*Leistungen für lagerfähiges, trockenes und gereinigtes Getreide, Sieb: Drahtgewebesieb 4,5 mm",  
+      "*Leistung bei einem Schüttgewicht von 750 kg/m³ und ca. 14 % Kornfeuchte",  
+
+    modelTypeNRHD: "Typ NR HD",
+    modelTypeNRL: "Typ NRL",
 
     galleryTitle: "Galerie",
     previous: "Zurück",
@@ -1874,9 +1886,9 @@ document.addEventListener("DOMContentLoaded", function () {
   },
 
   en: {
-    homeTitle: "Hammer Mill<br>Type RVO",
+    homeTitle: "Trough Chain Conveyor<br>Type NR",
     homeDescription:
-      "Efficient grinding for consistent product quality and reliable feed preparation processes.",
+      "High-performance, gentle conveying of large volumes of bulk material for demanding systems and high annual throughput.",
     learnMore: "LEARN MORE",
 
     brochuresTitle: "Brochures",
@@ -1884,66 +1896,54 @@ document.addEventListener("DOMContentLoaded", function () {
     downloadBrochuresText:
       "Scan the QR code with your smartphone to download all brochures and product information directly.",
 
-    cleaningCatalog: "Complete Catalogue: Milling & Mixing",
+    cleaningCatalog: "Complete Catalogue: Conveying",
     cleaningCatalogText:
-      "Detailed technical data, dimensions and further information on the RVO hammer mill without blower, as well as other products for milling and mixing.",
+      "Detailed technical data, dimensions and further information on the trough chain conveyor, as well as other products from our conveying range.",
 
-    cleaningBrochure: "Product Brochure: Milling & Mixing",
+    cleaningBrochure: "Product Brochure: Conveying",
     cleaningBrochureText:
-      "A compact overview of our milling and mixing products, including brief information on each product.",
+      "A compact overview of our conveying products, including brief information on each product.",
 
     informationTitle: "Information",
-    productTitle: "Hammer mill without blower, Type RVO",
+    productTitle: "Trough Chain Conveyor, Type NR",
 
     productDescription:
-      "High grinding capacity with low energy consumption.<br><br>" +
-      "The unique three-part screen system, combined with bidirectional rotation, allows the grist structure to be precisely adapted to different requirements.<br><br>" +
-      "48 beaters and large screen surfaces ensure uniform grinding, high throughput and reliable feed preparation with virtually dust-free operation.",
+      "The Type NR trough chain conveyor is designed for the reliable and gentle transport of large volumes of free-flowing bulk materials. Its robust, galvanized heavy-duty design is particularly suitable for large agricultural operations, storage facilities and handling terminals with high annual throughput.<br><br>" +
+      "Depending on the model size, the series provides high conveying capacities and can be used for both horizontal and slightly inclined conveying. The enclosed design supports clean material transport and allows flexible integration into a wide range of system configurations.",
 
     advantages: "Advantages",
 
     advantage1:
-     "Robust and durable machine construction",
-
+      "Gentle conveying with minimal grain damage",
     advantage2:
-      "Flexible adaptation to different feed mixtures",
-
+      "Reliable operation over long conveying distances",
     advantage3:
-      "Cost-effective operation due to low energy consumption",
-
+      "Low maintenance requirements thanks to its proven design",
     advantage4:
-      "Easy integration into existing systems",
-
+      "Space-saving integration into existing systems",
     advantage5:
-      "Reliable protection against metallic foreign objects",
-
+      "Suitable for horizontal and slightly inclined conveying routes",
     advantage6:
-      "Consistent grist quality for optimum feed results",
+      "Energy-efficient conveying of large material volumes",
 
-    rvoSmallSeries: "RVO 354 to RVO 854",
-    rvoLargeSeries: "RVO 922 to RVO 1075",
+    rvoSmallSeries: "Trough Chain Conveyor Type NRL",
+    rvoLargeSeries: "Trough Chain Conveyor Type NR HD",
 
-    modelComparison: "Model sizes at a glance",
-    technicalData: "Technical data",
-    type: "Type",
-    inletOutletDiameter:
-    "Inlet/outlet diameter [mm]",
-    screenArea: "Screen area [m²]",
-    screenWidth: "Screen width [mm]",
-    numberOfBeaters: "Number of beaters",
-    motorPower: "Motor power [kW]",
-    grindingCapacity: "Grinding capacity* [kg/h]",
-    grainType: "Barley/Wheat",
-    inlet: "Inlet Ø [mm]",
-    outlet: "Outlet Ø [mm]",
-    extractionFan: "Extraction fan [kW]",
-    airCapacity: "Air capacity [m³/h]",
-    cleaningCapacity: "Cleaning capacity [t/h]",
-    cleaningCapacityNote:
-      "at a bulk density of 750 kg/m³ and 14% residual moisture",
+    modelComparison: "Model Sizes at a Glance",
+    technicalData: "Technical Data",
+
+    tableType: "Type",
+    tableMotorPower: "Motor power<br>[kW]",
+    tableChainSpeed: "Chain speed<br>[m/s]",
+    tableCapacity: "Capacity*<br>[t/h]",
+    tableInletOutlet: "Inlet Ø /<br>outlet Ø [mm]",
+    tableLength: "Length<br>[m]",
 
     capacityFootnote:
-      "*Capacities for storable, dry and cleaned grain, screen: 4.5 mm wire mesh screen",  
+      "*Capacity based on a bulk density of 750 kg/m³ and approximately 14% grain moisture",  
+
+    modelTypeNRHD: "Type NR HD",
+    modelTypeNRL: "Type NRL",
 
     galleryTitle: "Gallery",
     previous: "Previous",
